@@ -1,0 +1,18 @@
+### Benutzerregistrierung mit Profilbild
+POST http://localhost:4000/api/auth/register
+Content-Type: multipart/form-data
+
+--boundary
+Content-Disposition: form-data; name="username"
+
+testuser
+--boundary
+Content-Disposition: form-data; name="password"
+
+testpassword
+--boundary
+Content-Disposition: form-data; name="profilePicture"; filename="profile.jpg"
+Content-Type: image/jpeg
+
+< ./path/to/your/profile.jpg
+--boundary--
